@@ -1,4 +1,5 @@
 close all;
+clear all;
 %Liquid level control system block diagram transfer functions
 
 %Pump transfer function
@@ -20,10 +21,13 @@ Gt=tf([0, Kt],[tt, 1]);
 Kl=1; % sensor gain
 Gl=tf([0, 1],1);
 
+% Block reduction
+
 OLTF= Gpm*Gv*Gt; % open loop transfer function
 CLTF = feedback(OLTF, Gl); %closed loop transfer function
-step(CLTF)
+step(CLTF) % step response of un-forced system
 stepinfo(CLTF)
+
 % Design of controller
 
 s = tf('s');
@@ -39,5 +43,8 @@ TF3 = feedback(TF2,1); % closed loop controller transfer function
 figure(3);
 step(TF3)
 stepinfo(TF3)
+
+%Stability
+
 figure(4);
 margin(TF2)
