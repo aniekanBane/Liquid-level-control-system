@@ -6,5 +6,7 @@ The following information was known about the plant:
 ![tranfer functions](https://github.com/aniekanBane/Liqiud-level-control-system/blob/main/tfcn.png)
 
 ## Block reduction
+Based on the superposition that there is No 'controller' in the system. The reduced diagram would be the multiplication of the plant tranfer functions:
+![closed function]()
 
 
