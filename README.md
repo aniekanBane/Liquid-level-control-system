@@ -10,6 +10,10 @@ Based on the superposition that there is No 'controller' in the system. The redu
 ![closed function](https://github.com/aniekanBane/Liqiud-level-control-system/blob/main/images/reduced.png)
 
 ## Controller
+A controller was to be designed to satisfy the following conditions:
+- The steady state error of the liquid level in the tank < ±0.5%.
+- Settling time < 1.5s
+- %OS < 5%.
 
 ## Stability
 
