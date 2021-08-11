@@ -1,5 +1,5 @@
 close all;
-clear all;
+
 %Liquid level control system block diagram transfer functions
 
 %Pump transfer function
