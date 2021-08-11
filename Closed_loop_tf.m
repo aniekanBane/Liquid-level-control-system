@@ -26,6 +26,7 @@ Gl=tf([0, 1],1);
 OLTF= Gpm*Gv*Gt; % open loop transfer function
 CLTF = feedback(OLTF, Gl); %closed loop transfer function
 step(CLTF) % step response of un-forced system
+title('Un-forced CLS')
 stepinfo(CLTF)
 
 % Design of controller
@@ -42,9 +43,10 @@ TF2 = K * TF1;
 TF3 = feedback(TF2,1); % closed loop controller transfer function
 figure(3);
 step(TF3)
+title('Forced CLS')
 stepinfo(TF3)
 
 %Stability
 
 figure(4);
-margin(TF2)
+margin(TF2) % Bode plot
