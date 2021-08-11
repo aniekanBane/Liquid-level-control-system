@@ -29,11 +29,11 @@ stepinfo(CLTF)
 s = tf('s');
 figure(1);
 rlocus(CLTF) % root locus of system
-PD = s + 4; % proportional derivative controller
+PD = s + 9.21; % Proportional derivative controller
 TF1 = PD * CLTF;
 figure(2);
 rlocus(TF1)
-K = 46; % controller gain
+K = 116.5; % controller gain
 TF2 = K * TF1;
 TF3 = feedback(TF2,1); % closed loop controller transfer function
 figure(3);
